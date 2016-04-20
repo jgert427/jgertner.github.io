@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>An introduction to Genetic Algorithms</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+	
+   <nav>
+	  <ul>
+		<li><a href='front.html'>Home</a></li>
+		<li><a href='intro.html'>Intro</a></li>
+		<li><a href='how.html'>How it Works</a></li>
+		<li><a href='best.html'>Using it</a></li>
+		<li class ="dropdown">
+			<a href="javascript:void(0)" class="dropbtn" 
+			onclick="myFunction()">Examples</a>
+				<ul class="dropdown-content" id="myDropdown">
+					<li><a href='saga.html'>SAGA</a></li>
+					<li><a href='portfolio.html'>Portfolio Optimization</a></li>
+					<li><a href='circuits.html'>Evolved Circuits</a></li>
+				</div>
+				</ul>
+		</li>
+		<li><a href='about.html'>References</a></li>
+	</ul>
+   </nav>
+	
+  <div id="main">	
+  <h1>WELCOME</h1> 
+  <p></p>
+  <p>This is a small educational website designed to introduce the concept of genetic algorithms to anyone with interest.</p>
+  <p>Click the links below to get started</p>
+  <p></p>
+		<p><a href='intro.html'>Introduction</a>: here we introduce the concept of genetic algorithms.</p>
+		<p></p>
+		<p><a href='how.html'>Step by step</a>: here we explain the basic structure that all genetic algorithms follow.</p>
+		<p></p>
+		<p><a href='best.html'>When can you use it?</a>: here we explain what requirements a genetic algorithm has for use and when is the best time to use one.</p>
+			<p></p>
+			<p>Examples</p>
+   <p></p>			
+			<p><a href='saga.html'>SAGA</a>: here we look at how multiple sequence protein alignment can be done with a genetic algorithm.</p>
+	<p></p>
+	<p><a href='portfolio.html'>Portfolio Optimization</a>: here we look at how investment portfolios can be optimized with a genetic algorithm.</p>
+	<p></p>		
+	<p><a href='circuits.html'>Evolved Circuits</a>: here we look at how genetic algorithms can be applied to adaptable circuits.</p>
+  
+  
+<footer>
+<button onclick="myCitation()">Create Citation</button>
+
+<p id="citation"></p>
+
+<script>
+function myCitation(){
+var d=new Date();
+var n=d.toUTCString();
+document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a Genetic Algorithm?</q>" + " <i>An Introduction to Genetic Algorithms.</i> 20.Apr.2016 Web. " + " " + n + ", <" + location.host + ">";
+}
+
+</script>
+
+</footer>
+</div> 
+  
+  <script src="script.js"></script>
+  
+</body>
+</html> 
