@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>References</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--menu display-->
+  <nav>
+	  <ul>
+		<li><a href='front.html'>Home</a></li>
+		<li><a href='intro.html'>Intro</a></li>
+		<li><a href='how.html'>How it Works</a></li>
+		<li><a href='best.html'>Using it</a></li>
+		<li class ="dropdown">
+			<a href="javascript:void(0)" class="dropbtn" 
+			onclick="myFunction()">Examples</a>
+				<ul class="dropdown-content" id="myDropdown">
+					<li><a href='saga.html'>SAGA</a></li>
+					<li><a href='portfolio.html'>Portfolio Optimization</a></li>
+					<li><a href='circuits.html'>Evolved Circuits</a></li>
+				</div>
+				</ul>
+		</li>
+		<li><a href='about.html'>References</a></li>
+	</ul>
+   </nav>
+
+
+<div id="main">
+  <h1>What is a Genetic Algorithm?</h1> 
+
+  <p>Genetic algorithms are a group of algorithms based on evolution. 
+  In nature evolution favors those with advantageous traits which are then able to reproduce and pass on those traits to further generations.
+  So a genetic algorithm uses a computational model to mimic this process for a given problem. 
+  A genetic algorithm is designed with a an optimized goal in mind and given all parameters involved leads to the best solution for the given problem. </p>
+  
+  <footer>
+<button onclick="myCitation()">Create Citation</button>
+
+<p id="citation"></p>
+
+<script>
+function myCitation(){
+var d=new Date();
+var n=d.toUTCString();
+document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a Genetic Algorithm?</q>" + " <i>An Introduction to Genetic Algorithms.</i> 20.Apr.2016 Web. " + " " + n + ", <" + location.host + ">";
+}
+
+</script>
+
+</footer>
+</div> 
+  
+  <script src="script.js"></script>
+
+</body>
+</html>

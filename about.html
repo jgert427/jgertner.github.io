@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>References</title>
+  <link href="site.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!--menu display-->
+  <nav>
+	  <ul>
+		<li><a href='front.html'>Home</a></li>
+		<li><a href='intro.html'>Intro</a></li>
+		<li><a href='how.html'>How it Works</a></li>
+		<li><a href='best.html'>Using it</a></li>
+		<li class ="dropdown">
+			<a href="javascript:void(0)" class="dropbtn" 
+			onclick="myFunction()">Examples</a>
+				<ul class="dropdown-content" id="myDropdown">
+					<li><a href='saga.html'>SAGA</a></li>
+					<li><a href='portfolio.html'>Portfolio Optimization</a></li>
+					<li><a href='circuits.html'>Evolved Circuits</a></li>
+				</div>
+				</ul>
+		</li>
+		<li><a href='about.html'>References</a></li>
+	</ul>
+   </nav>
+
+
+<div id="main">
+  <h1>References</h1>
+  <p>This website was created by Joshua Gertner, coded using html, css, javascript, and jquery</p>
+  <p></p>
+  <p>The following resources were used as references for this website</p>
+  <p>Notredame, Cedric, and Desmond G. Higgins. "SAGA: Sequence Alignment by Genetic Algorithm." Nucleic Acids Research 24.8 (1996): 1515-524. Web.</p>
+  <p>Sefiane, Slimane, and Mohamed Benbouziane. "Portfolio Selection Using Genetic Algorithm." Journal of Applied Finance & Banking 2.4 (2012). Web.</p>
+  <p>"Evolvable Hardware." - Wikipedia, the Free Encyclopedia. Web. 18 Apr. 2016.</p>
+  <p></p>
+  
+  <footer>
+<button onclick="myCitation()">Create Citation</button>
+
+<p id="citation"></p>
+
+<script>
+function myCitation(){
+var d=new Date();
+var n=d.toUTCString();
+document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a Genetic Algorithm?</q>" + " <i>An Introduction to Genetic Algorithms.</i> 20.Apr.2016 Web. " + " " + n + ", <" + location.host + ">";
+}
+
+</script>
+
+</footer>
+</div> 
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
