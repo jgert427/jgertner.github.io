@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <title>References</title>
+  <title>How a Genetic Algorithm Works</title>
   <link href="site.css" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
@@ -31,15 +32,21 @@
 
 
 <div id="main">
-  <h1>References</h1>
-  <p>This website was created by Joshua Gertner, coded using html, css, javascript, and jquery</p>
-  <p></p>
-  <p>The following resources were used as references for this website</p>
-  <p>Notredame, Cedric, and Desmond G. Higgins. "SAGA: Sequence Alignment by Genetic Algorithm." Nucleic Acids Research 24.8 (1996): 1515-524. Web.</p>
-  <p>Sefiane, Slimane, and Mohamed Benbouziane. "Portfolio Selection Using Genetic Algorithm." Journal of Applied Finance & Banking 2.4 (2012). Web.</p>
-  <p>"Evolvable Hardware." - Wikipedia, the Free Encyclopedia. Web. 18 Apr. 2016.</p>
-  <p></p>
+  <h1>How do Genetic Algorithms Actually Work?</h1>
   
+  <p></p>
+  <h2>All genetic algorithms follow this basic format:</h2>
+  <p><strong>Initialization-</strong> Create the initial population, this is usually randomly generated and can be any size as needed</p>
+  <p><strong>Evaluation-</strong> Each member, or chromosome as it’s referred to in a genetic algorithm, is then evaluated and given a fitness score. The fitness score is calculated based on how well each chromosome fits to the desired parameter, so better solutions get better scores.</p>
+  <p><strong>Selection-</strong> There are many different ways of determining selection but all selections have the same goal in mind, make the better outcome more likely, therefore only chromosomes with higher scores are retained.</p>
+  <p><strong>Crossover-</strong> Aspects of chromosomes are combined to create new chromosomes. This is just like reproduction in nature and the hope is to produce a new and better chromosome with a higher fitness score.</p>
+  <p><strong>Mutation-</strong> So as to not have only the possibilities contained in the original population random small changes are made</p>
+  <p><strong>Repeat-</strong> With a brand new population the process can repeat until a termination condition is reached</p>
+  <p><strong>Termination-</strong> Termination is usually determined by preset conditions, once the algorithm finds a solution that meets the desired parameter there is no need for it to continue.</p>
+
+  <p></p>
+  <span class="left"><a href='intro.html'>Previous</a></span>​<span class="right"><a href='best.html'>Next</a></span>
+  <p></p>
   <footer>
 <button onclick="myCitation()">Create Citation</button>
 
