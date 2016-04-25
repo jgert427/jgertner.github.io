@@ -1,7 +1,14 @@
 /*menu display*/
+nav {
+width:60%;
+margin:0 auto;
+list-style:none;
+
+}
 
 ul {
     list-style-type: none;
+	position: center;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -72,7 +79,7 @@ body {
     padding-right: 15px;
     background-color: #ffffff;
     border-radius: 0 0 5px 5px;
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 	height:90vh;
 }
@@ -98,7 +105,14 @@ h2{
     float:left;
 }
 
-
+img {
+  max-width: 65%;
+  width: auto   9;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
 
 
 
