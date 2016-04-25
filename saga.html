@@ -2,15 +2,19 @@
 <html>
 
 <head>
-  <title>References</title>
+  <title>Bio Examples</title>
   <link href="site.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  
+  <script src 'script.js'></script>
 </head>
 
 <body>
 
 <!--menu display-->
-  <nav>
+	<nav>
 	  <ul>
 		<li><a href='front.html'>Home</a></li>
 		<li><a href='intro.html'>Intro</a></li>
@@ -28,20 +32,49 @@
 		</li>
 		<li><a href='about.html'>References</a></li>
 	</ul>
-   </nav>
+   </nav> 
 
+	
 
-<div id="main">
-  <h1>References</h1>
-  <p>This website was created by Joshua Gertner, coded using html, css, javascript, and jquery</p>
-  <p></p>
-  <p>The following resources were used as references for this website</p>
-  <p>Notredame, Cedric, and Desmond G. Higgins. "SAGA: Sequence Alignment by Genetic Algorithm." Nucleic Acids Research 24.8 (1996): 1515-524. Web.</p>
-  <p>Sefiane, Slimane, and Mohamed Benbouziane. "Portfolio Selection Using Genetic Algorithm." Journal of Applied Finance & Banking 2.4 (2012). Web.</p>
-  <p>"Evolvable Hardware." - Wikipedia, the Free Encyclopedia. Web. 18 Apr. 2016.</p>
+  <h1>The Sequence Alignment Genetic Algorithm (SAGA)</h1>
+  <div class="center">
+  <div class="slideshow">
+
+		
+		<div>
+            <img src="init.jpg" />
+            <p>1</p> 
+        </div>
+		<div>
+            <img src="eval.jpg" />
+            <p>3000000<br> ok </p> 
+        </div>
+		<div>
+            <img src="pick.jpg" />
+            <p>3</p> 
+        </div>
+        <!-- more figures here as needed -->
+	</div>
+	</div>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+	$('.slideshow').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true,
+	});
+});
+  </script>
+	<p></p>
+	<p></p>
   <p></p>
   <span class="left"><a href='best.html'>Previous</a></span>​<span class="right"><a href='portfolio.html'>Next</a></span>
-  <p></p>
   <footer>
 <button onclick="myCitation()">Create Citation</button>
 
@@ -57,9 +90,9 @@ document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a
 </script>
 
 </footer>
-</div> 
+
   
-  <script src="script.js"></script>
+
 
 </body>
 </html>
