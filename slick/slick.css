@@ -2,9 +2,9 @@
 .slick-slider
 {
     position: relative;
-
+	width: 65%;
     display: block;
-
+	margin: 0 auto;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
 
