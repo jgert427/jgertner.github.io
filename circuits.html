@@ -2,15 +2,19 @@
 <html>
 
 <head>
-  <title>References</title>
+  <title>Bio Examples</title>
   <link href="site.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  
+  <script src 'script.js'></script>
 </head>
 
 <body>
 
 <!--menu display-->
-  <nav>
+	<nav>
 	  <ul>
 		<li><a href='front.html'>Home</a></li>
 		<li><a href='intro.html'>Intro</a></li>
@@ -27,21 +31,34 @@
 				</ul>
 		</li>
 		<li><a href='about.html'>References</a></li>
+		<li><a href='learn.html'>Resources</a></li>
 	</ul>
-   </nav>
+   </nav> 
 
-
+	
 <div id="main">
-  <h1>References</h1>
-  <p>This website was created by Joshua Gertner, coded using html, css, javascript, and jquery</p>
+  <h1>Evolutionary Hardware</h1>
+  
+  <p>If you haven't already looked over the first example, SAGA, 
+  it would be a good idea to look it over as the following example does not lend itself to images.</p>
+  <p><strong>This last example is about evolutionary hardware, a developing technology that could allow machines to change dynamically and autonomously .</strong></p>
   <p></p>
-  <p>The following resources were used as references for this website</p>
-  <p>Notredame, Cedric, and Desmond G. Higgins. "SAGA: Sequence Alignment by Genetic Algorithm." Nucleic Acids Research 24.8 (1996): 1515-524. Web.</p>
-  <p>Sefiane, Slimane, and Mohamed Benbouziane. "Portfolio Selection Using Genetic Algorithm." Journal of Applied Finance & Banking 2.4 (2012). Web.</p>
-  <p>"Evolvable Hardware." - Wikipedia, the Free Encyclopedia. Web. 18 Apr. 2016.</p>
+  <p>Like any genetic algorithm the algorithm at work manipulates a population to get the optimal desired result. 
+  In this case the population is made up of possible circuit constructs. 
+  Each circuit is given a fitness score which tells how well that circuit accomplishes the current goal.
+  Depending on the device these configurations are either simulated or physically implemented to test whether it accomplishes the current goal.
+  Using the objective functions the device is able to come up with new possible circuits, with crossovers and mutaions</p>
+ <p>Evolved hardware is common in devices sent into space. It is vital in solving different problems that such a device may encounter in space. 
+ For example, if a probe were to run into unusually high levels of radiation, the radiation could damage some of the circuitry. 
+ If this were to happen the algorithm would attempt to find the best replacement circuits for all tasks that required the now dead circuits. 
+ This can allow scientists more leeway when trying to design such a device for all variables. 
+ All of this requires not only the algorithm but the hardware that can adapt to it, and an AI autonomously detect when new circuits are required.</p>
+ 
+  </script>
+	<p></p>
+	<p></p>
   <p></p>
   <span class="left"><a href='portfolio.html'>Previous</a></span>​<span class="right"><a href='about.html'>Next</a></span>
-  <p></p>
   <footer>
 <button onclick="myCitation()">Create Citation</button>
 
@@ -57,9 +74,9 @@ document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a
 </script>
 
 </footer>
-</div> 
+</div>
   
-  <script src="script.js"></script>
+
 
 </body>
 </html>
