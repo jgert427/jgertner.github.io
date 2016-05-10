@@ -59,13 +59,10 @@ ul {
     .show {display:block;}
 /* Page display*/
 html{
-	background: url(dna.jpg) center center no-repeat; 
+	background: url(dna.jpg) center center no-repeat fixed; 
 	-webkit-background-size: cover;
     -moz-background-size: cover;
 	background-size: cover;
-	min-height: 100%;
-	width: 100%;
-	height: auto;
 }
 body {
     font-family: "Trebuchet MS", Verdana, sans-serif;
