@@ -90,10 +90,12 @@
 .slick-prev:before
 {
     content: '←';
+	color: grey;
 }
 [dir='rtl'] .slick-prev:before
 {
     content: '→';
+	color: grey;
 }
 
 .slick-next
@@ -108,32 +110,39 @@
 .slick-next:before
 {
     content: '→';
+	color:grey;
 }
 [dir='rtl'] .slick-next:before
 {
     content: '←';
+	color:grey;
 }
 
 /* Dots */
 .slick-slider
 {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .slick-dots
 {
     position: absolute;
     bottom: -45px;
-	
     display: block;
-
     width: 100%;
     padding: 0;
-
     list-style: none;
-
     text-align: center;
+	padding: 0px;
 }
+
+.slick-dots ul{
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+	
+}
+
 .slick-dots li
 {
     position: relative;

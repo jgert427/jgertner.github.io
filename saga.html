@@ -31,28 +31,59 @@
 				</ul>
 		</li>
 		<li><a href='about.html'>References</a></li>
+		<li><a href='learn.html'>Resources</a></li>
 	</ul>
    </nav> 
 
 	
-
+<div id="main">
   <h1>The Sequence Alignment Genetic Algorithm (SAGA)</h1>
+  
+  <p>If you have read this far you probably are still unclear as to how exactly a genetic algorithm works. 
+  The following is an example of how SAGA, a multiple protein sequence alignment genetic algorithm, works.</p>
   <div class="center">
   <div class="slideshow">
 
 		
 		<div>
             <img src="init.jpg" />
-            <p>1</p> 
+            <p><strong>Initialization:</strong> This genetic algorithm, designed to find optimal alignments in mutiple protein sequence alignments,
+			begins by creating a random population of 100.
+			Each is a random sequences created through a set design. The above example is a sample of 4 such sequences to demonstrate how the algorithm works. 
+			</p> 
         </div>
 		<div>
             <img src="eval.jpg" />
-            <p>3000000<br> ok </p> 
+            <p><strong>Evaluation:</strong> Each sequence is evaluated and given a fitness score. 
+			This score is based off how many proteins in each sequence are aligned, mismatched, as well as the number of gaps. 
+			It also takes into account similarity to the other members of the current generation. Duplicates are removed. </p> 
         </div>
 		<div>
             <img src="pick.jpg" />
-            <p>3</p> 
+            <p><strong>Selection:</strong>  In each generation of results for this algorithm 50% are kept and form half of them next generation, 
+			this is a process known as overlapping generations. 
+			What this means is that 50% of alignments move on unchanged based on thier fitness score from the previous step.
+			<br><strong>Above:</strong> Sequences with better fitness scores are kept (50%) while the rest are removed.</p> 
         </div>
+		<div>
+            <img src="cross.jpg" />
+            <p><strong>Breeding:</strong> As the previous step stated 50% of each generation is the best of the previous generation. 
+			The other half is created by choosing parents to create new sequences. This is accomplished by creating crossovers of the two parent alignments.
+			This process increases the diversity of the poulation allowing for a higher likelyhood of reaching the optimal result.
+			<br><strong>Above:</strong> The two sequences kept during the previous selection step are used as parents to create 2 new child alignments. 
+			The alignments are evaluated and the best one is chosen to be a part of the the next generation.</p> 
+        </div>
+		<div>
+            <img src="mutate.jpg" />
+            <p><strong>Mutation:</strong> Mutation is a subsection of the previous step breeding. Like breeding it picks parents at random and creates new child alignments.
+			Mutations in this algorithm are created by adding, moving, or removing gaps in any of the sequences, gaps are added at the end to match length as necessary.  
+			<br><strong>Above:</strong> Sequence 2 from our orginal alignments is chosen as a parent 
+			and a new child sequence is created by adding 2 gaps to two of the sequences, gaps are then added to the end of the remaining sequences to match length.</p> 
+        </div>
+		<div>
+            <p><strong>Termination:</strong> After no improvements have been made in 100 generations the process is terminated and the current answer with the best fitness score is reported as the answer.</p> 
+        </div>
+		
         <!-- more figures here as needed -->
 	</div>
 	</div>
@@ -73,6 +104,34 @@
   </script>
 	<p></p>
 	<p></p>
+	<p><strong>A Detailed Explanation:</strong></p>
+	<p>When the algorithm begins it creates a generation 0 containing 100 different alignments. 
+	These alignments are created setting a random offset, a number of gaps at the beginning, from 0-50 and then filling in gaps at the end of each sequence to end up with a matching length in each individidual alignment.
+	At this step, and every other step that chenages the contents of the current generation, all alignments are checked for duplicates, as duplicates are not allowed.
+	Once created they are evaluated with a fitness score. The score is designed to assess the alignments based on a number of criterea including; number of matched, misatched, and gaps as well as similarity to other alignments.
+	Once scored the top 50% are kept to become part of the next generation while the bottom are dropped, they can however still be used in the crossover/mutation steps.
+	The next step is to repopulate the next generation as only 50% has been decided the other 50% is generated in the crossover/mutation steps. Then the process is repeated until termination.
+	</p>
+	
+	<p>The algorithm is designed to be adaptive enabling it to be adjusted as needed to suit all problems of multiple protein alignment and 
+	this is accomplished through the use of what are called objective functions. These are what are used for the crossover/mutation steps.
+	In all there are 22 seperate objective functions in this algorithm, each designed to crossover or add, move or remove gaps in different ways. 
+	These were designed to optimize the results. It works by dynamically queueing each function and designating each a starting probability of 1/22 of being used.
+	Every 10 generations the probabilities are adjusted to favor the functions that have produced the most children, in the current genreation.
+	To stop the removal of a function that could prove useful later each function has a minimum probability of half its starting probability (1/44).</p>
+	
+	<p>Without setting a termination condition a genetic algorithm can theoretically go on infinitely. 
+	This alogrithm, like many other genetic algorithms, determines termination occurs if no improvement has been made over a set number of generations, in this case 100.
+	If no improvement has been made in the last 100 generations then it is decided the current answer with the best fitness score is the optimal alignment. </p>
+	
+	<p>Overall this algorithm is shown to be quite useful as it can match and in some cases outperform its most used competitors, MSA and CLUSTAL W. 
+	These cases of outperformance tend to be cases with longer sequences as MSA and CLUSTAL W are not as good at handling longer sequences, especially MSA.
+	Its memory usage is minimal as the only thing that needs to be stored is the current generation; 
+	even in a case with 10 sequences of average length 200 and a population size of 100, about 1Mb is sufficient enough memory.
+	As far as run time compared to it's biggest competitors it is clearly slower by a large margin.
+	Overall it is statistaclly better in terms of results by a small margin and due to its design it can be easily adjusted if the current iteration does not suit the needs of the user.</p>
+	<p>For more information or to request access to the code for this algorithm <a href='http://m.nar.oxfordjournals.org/content/24/8/1515.full?cited-by=yes&legid=nar%3b24/8/1515'> Click Here</a> for the full-text published on SAGA.</p>
+	<p></p>
   <p></p>
   <span class="left"><a href='best.html'>Previous</a></span>​<span class="right"><a href='portfolio.html'>Next</a></span>
   <footer>
@@ -90,7 +149,7 @@ document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a
 </script>
 
 </footer>
-
+</div>
   
 
 

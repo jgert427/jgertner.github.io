@@ -9,7 +9,7 @@ list-style:none;
 ul {
     list-style-type: none;
 	position: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     overflow: hidden;
     background-color: #333;
@@ -63,6 +63,9 @@ html{
 	-webkit-background-size: cover;
     -moz-background-size: cover;
 	background-size: cover;
+	min-height: 100%;
+	width: 100%;
+	height: auto;
 }
 body {
     font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -81,7 +84,8 @@ body {
     border-radius: 0 0 5px 5px;
 	width: 60%;
 	margin: 0 auto;
-	height:90vh;
+	height: auto;
+	min-height: 100%;
 }
 
 h1 {
@@ -95,7 +99,6 @@ h2{
     color: black;
     font-size: 24px;
 }
-
 /* back and next button format*/
 .right{
     float:right;
@@ -106,12 +109,14 @@ h2{
 }
 
 img {
-  max-width: 65%;
+  max-width: 100%;
+  min-width: 100%;
   width: auto   9;
   height: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+  
 }
 
 

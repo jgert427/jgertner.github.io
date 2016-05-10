@@ -2,15 +2,16 @@
 <html>
 
 <head>
-  <title>References</title>
+  <title>Stock Investing Example</title>
   <link href="site.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script src 'script.js'></script>
 </head>
 
 <body>
 
 <!--menu display-->
-  <nav>
+	<nav>
 	  <ul>
 		<li><a href='front.html'>Home</a></li>
 		<li><a href='intro.html'>Intro</a></li>
@@ -27,22 +28,42 @@
 				</ul>
 		</li>
 		<li><a href='about.html'>References</a></li>
+		<li><a href='learn.html'>Resources</a></li>
 	</ul>
-   </nav>
+   </nav> 
 
-
+	
 <div id="main">
-  <h1>References</h1>
-  <p>This website was created by Joshua Gertner, coded using html, css, javascript, and jquery</p>
+  <h1>Genetic Algorithms for Maximizing Investment Portfolios</h1>
+  
+  <p>If you haven't already looked over the first example, SAGA, it would be a good idea to look it over as the following example does not lend itself to images.</p>
   <p></p>
-  <p>The following resources were used as references for this website</p>
-  <p>Notredame, Cedric, and Desmond G. Higgins. "SAGA: Sequence Alignment by Genetic Algorithm." Nucleic Acids Research 24.8 (1996): 1515-524. Web.</p>
-  <p>Sefiane, Slimane, and Mohamed Benbouziane. "Portfolio Selection Using Genetic Algorithm." Journal of Applied Finance & Banking 2.4 (2012). Web.</p>
-  <p>"Evolvable Hardware." - Wikipedia, the Free Encyclopedia. Web. 18 Apr. 2016.</p>
+  <p><strong>The following is an example of how genetic algorithms can be used to optimize investment portfolios. </strong></p>
+  <p> </p>
+  <p>Genetic algorithms are used for investment portfolios becuase they are able to take into account both major points of investing, risk and return. 
+  Previously to this most algorithms were linear or quadratic and were only able to take into account one of these as a variable, which was almost alway return.
+  The problem with that is that not all investors are ok with high amounts of risk and will often sell to cut thier losses, rather than wait it out for the possibility of large returns later.
+  Genetic algorithms not only allow both to be variables but can take into account any number of variables based on the portfolio contents. 
+  The end goal of such an algorithm is to find the portfolio that is able to maximize return while minimizing risk. 
+  </p>
+  <p>To start off with the initial population unlike the previous example is much larger and is broken up into sub-categories, called species. 
+  Each of these species is divided by the value of their trade-off coefficient, the value that determines how much to prioritize risk over return and vice versa.
+  Each is then scored based on their projected return and risk. 
+  In this algorithm unlike the previous example 100% of the next generation is created using the objective functions, 
+  this is because a good genetic algorithm will naturally keep in better solutions (just like in evolution). 
+   </p>
+  <p>The objective functions for this example aim to create variation in the contents of the porfolios. 
+  To do this the crossover and mutation functions change not only which stocks from the selection are chosen but how much of each is purchased in the porfolio.
+  Unfortunately this is where the example gets a little hazy. Because this is an algorithm used for investment the details as to how each objective function, 
+  or the score for that matter, actually works is not detailed in the published article. This is quite common in investment algorithm publication, 
+  people publish thier data but the actual details of their algorithm are vital to maximizing their own, or thier company's profit. 
+  Even without such details, objective functions all aim at maximizing variation in the data to increase likelyhood of arriving at the global optimal.
+  The run time for this algorithm and most algorithms in the field is under 10ms; as slower algorithms might be susceptible to being manipulated by faster algorithms searching for slow algorithms.</p>
+	<p></p>
+	<p>To learn more <a href='http://www.scienpress.com/Upload/JAFB/Vol%202_4_9.pdf'>Click Here</a>.</p>
+	<p></p>
   <p></p>
   <span class="left"><a href='saga.html'>Previous</a></span>​<span class="right"><a href='circuits.html'>Next</a></span>
-  <p></p>
-  
   <footer>
 <button onclick="myCitation()">Create Citation</button>
 
@@ -58,9 +79,9 @@ document.getElementById("citation").innerHTML = "Gertner, Joshua L. <q>What is a
 </script>
 
 </footer>
-</div> 
+</div>
   
-  <script src="script.js"></script>
+
 
 </body>
 </html>
